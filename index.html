@@ -7,73 +7,91 @@
 		<title>Document</title>
 		<style>
 			:root {
-				font-size: 14px;
-            line-height: 1.5;
-            font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-            -webkit-text-size-adjust: 100%;
-            color: #24292e;
+				font-size: 20px;
+				line-height: 1.5;
+				font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+					"Segoe UI Symbol";
+				-webkit-text-size-adjust: 100%;
+				color: #24292e;
 			}
-         main {
-            font-size: 16px;
-            line-height: 1.5;
-            padding: 16px;
-         }
+			* {
+				box-sizing: border-box;
+			}
+			main {
+				font-size: 1.2rem;
+				line-height: 1.5;
+				padding: 16px;
+			}
 			svg {
 				vertical-align: middle;
 			}
 			li > * {
 				vertical-align: top;
 			}
-			ul ul li {
-				list-style-type: circle;
-            margin-left: -25px;
+			ul {
+				margin-top: 0px;
 			}
-         ul a {
-            padding-left: 4px;
+			ul ul li {
+				list-style-type:disc;
+				list-style-type:disc;
+			}
+			ul a {
+				padding-left: 4px;
+			}
+         ul * {
+            vertical-align: text-bottom;
+
          }
-         .repo-container {
-            margin: 0px;
-            min-height: 130px;
+         time {
+            position: relative;
+            top:-4px;
          }
+			ul ul {
+				margin: 5px 0px 0px -20px;
+			}
+			.repo-container {
+				margin: 0px;
+				min-height: 180px;
+			}
 			.repo-container > ul {
 				display: inline-block;
 			}
 			.gradient {
 				pointer-events: all;
-            fill:url("#gradient-layer-initial");
+				fill: url("#gradient-layer-initial");
 			}
 
 			img {
-				width: 160px;
+				width: 200px;
 				border: 2px solid black;
 				vertical-align: top;
-            margin: 24px -10px 0px 0px;
+				margin: 8px -10px 0px 0px;
 			}
 			.github-link {
 				cursor: pointer;
 				left: -5px;
-            top: -2px;
-            position: relative;
+				top: -2px;
+				position: relative;
 			}
 
-         .gradient{
-            fill: url("#gradient-layer");
-         }
-         .gradient-initial {
-            transition: 0.4s;
-         }
+			.gradient {
+				fill: url("#gradient-layer");
+			}
+			.gradient-initial {
+				transition: 0.4s;
+			}
 			.gradient ~ defs stop:first-child {
 				stop-color: #e1a728;
 			}
 
-			.gradient~ defs stop:nth-child(2) {
+			.gradient ~ defs stop:nth-child(2) {
 				stop-color: #e1a728;
 			}
 
 			.gradient ~ defs stop:last-child {
 				stop-color: #24bed2;
 			}
-         /* .gradient[data-hover=false] ~ defs stop:first-child {
+			/* .gradient[data-hover=false] ~ defs stop:first-child {
 				stop-color: #240f3c;
 			}
 
@@ -84,7 +102,7 @@
 			.gradient[data-hover=false] ~ defs stop:last-child {
 				stop-color: #1c2021;
 			} */
-         /* .gradient ~ defs stop:first-child {
+			/* .gradient ~ defs stop:first-child {
 				stop-color: #099b68;
 			}
 
@@ -95,169 +113,310 @@
 			.gradient ~ defs stop:last-child {
 				stop-color: #ac333b;
 			} */
-         
-         time {
-            font-size: 0.7em;
-            vertical-align: middle;
-         }
-         h1 {
-            padding-bottom: 0.3em;
-            margin-top:0px;
-            margin-bottom:0px;
-            font-size: 2em;
-            border-bottom: 1px solid #eaecef;
-            font-weight: 600;
-            line-height: 1.25;
-         }
+
+			time {
+				font-size: 0.7rem;
+				vertical-align: middle;
+			}
+			h1 {
+				padding-bottom: 0.3em;
+				margin-top: 0px;
+				margin-bottom: 0px;
+				font-size: 2rem;
+				border-bottom: 1px solid #eaecef;
+				font-weight: 600;
+				line-height: 1.25;
+			}
+			.bounce {
+				position: relative;
+				animation: bounce 0.7s infinite ease-in-out;
+			}
+			.title {
+				position: relative;
+				/* left: -15px; */
+			}
+			blockquote {
+				/* border-radius: 5px; */
+				background: #f6f6f6;
+				margin: 5px 0px 0px 0px;
+				padding: 10px 14px;
+            border-left: 4px solid rgb(153, 153, 153);
+            /* box-shadow: 0px 0px 10px 0px inset rgb(199, 199, 199); */
+            font-size: 1rem;
+			}
+			@keyframes bounce {
+				0% {
+					bottom: 5px;
+				}
+				25%,
+				75% {
+					bottom: 15px;
+				}
+				50% {
+					bottom: 20px;
+				}
+				100% {
+					bottom: 0;
+				}
+			}
+			@media screen and (max-width: 768px) {
+				img {
+					width: 100%;
+				}
+				.repo-container > ul {
+					display: block;
+					padding: 0px;
+					margin-top: 20px;
+				}
+			}
 		</style>
 	</head>
 	<body>
 		<main>
 			<h1>ronerlih.github.io</h1>
-         <h2><font style="font-size: 2em; ;margin-bottom: -42px;">🦄</font> Projects, Gists, Works, and Dreams</h2>
-         
-         <!-- project item -->
-         <div class="repo-container">
-            <img src="https://s3-us-west-2.amazonaws.com/ronerlih.com/resources/GoogleMirror/gooogleMirror_05.jpg" alt="googlemirror.net" />
-            <ul>
-               <li>
-                  <strong>GoogleMirror.net </strong>
-                  <time datetime="2012-01-01">(2012)</time>
-   
-                  <ul>
-                     <li>🌎 <a href="http://googlemirror.net/" target="_blank"> googlemirror.net</a><span> - live</span></li>
-                     <li>🌎 <a href="https://ronerlihstudio.com/googleMirror.html" target="_blank"> more</a><span> - About, photos, and video</span></li>
-                     <li>
-                        <a
-                           class="github-link"
-                           href="https://github.com/ronerlih/googlemirror.net"
-                           style="vertical-align: middle"
-                        >
-                           <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="-3 0 28 28">
-                              <path
-                                 class="gradient"
-                                 data-hover="false"
-                                 d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
-                              ></path>
-                              <defs>
-                                 <linearGradient id="gradient-layer" x1="0" x2="0" y1="62" y2="0" gradientUnits="userSpaceOnUse">
-                                    <stop offset="30%" stop-color="#e1a728" ></stop>
-                                    <stop offset="80%" stop-color="#e1a728" ></stop>
-                                    <stop offset="100%" stop-color="#24bed2" ></stop>
-                                 </linearGradient>
-                                
-                              </defs>
-                              <path
-                              class="gradient-initial"
-                              data-hover="false"
-                              d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
-                              fill="black"
-                           ></path>
-                           </svg>
-                           github
-                        </a>
-                     </li>
-                  </ul>
-               </li>
-            </ul>
-         </div>
+			<h2>
+				<font style="font-size: 2rem; margin-bottom: -42px">
+					<!-- 🦄 -->
+				</font>
+				Projects, Gists, Works, and Dreams
+			</h2>
 
-         <!-- project item -->
-         <div class="repo-container">
-            <img src="https://ronerlihstudio.com/Images/dev-now.jpg" alt="googlemirror.net" />
-            <ul>
-               <li>
-                  <strong>DevNow projects</strong>
-   
-                  <ul>
-                     <li>🌎 <a href="https://www.developing.co/" target="_blank">https://www.developing.co/</a><span> - catalog</span></li>
-                     
-                  </ul>
-               </li>
-            </ul>
-         </div>
+			<!-- project item -->
+			<div class="repo-container">
+				<img src="https://ronerlihstudio.com/Images/tm-01.jpg" alt="AWS cross-company privilages dashboard" />
+				<ul>
+					<div class="title">
+						<strong>Transparent Mart</strong>
+						<time datetime="2017-01-01">(2017)</time>
+					</div>
+					<blockquote>
+						<div><em>Blockchain based Digital assets market - secure NFT alternative</em></div>
+						<div><em>Prices are set by verified purchases comments and verified purchase volume,</em></div>
+						<div><em>visualisation of past transactions through the leger, price graphs, insights. - TBD</em></div>
+					</blockquote>
 
-     
-         <!-- project item -->
-         <div class="repo-container">
-            <img src="https://ronerlihstudio.com/Images/aws-buckets.jpg" alt="AWS cross-company privilages dashboard" />
-            <ul>
-               <li>
-                  <strong>AWS cross-company privileges dashboard</strong>
-   
-                  <ul>
-                     <li>
-                        <a
-                           class="github-link"
-                           href="https://github.com/ronerlih/dropBucket-AWS"
-                           style="vertical-align: middle"
-                        >
-                           <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="-3 0 28 28">
-                              <path
-                                 class="gradient"
-                                 data-hover="false"
-                                 d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
-                              ></path>
-                              <defs>
-                                 <linearGradient id="gradient-layer" x1="0" x2="0" y1="62" y2="0" gradientUnits="userSpaceOnUse">
-                                    <stop offset="30%" stop-color="#e1a728" ></stop>
-                                    <stop offset="80%" stop-color="#e1a728" ></stop>
-                                    <stop offset="100%" stop-color="#24bed2" ></stop>
-                                 </linearGradient>
-                                
-                              </defs>
-                              <path
-                              class="gradient-initial"
-                              data-hover="false"
-                              d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
-                              fill="black"
-                           ></path>
-                           </svg>
-                           github
-                        </a>
-                     </li>
-                  </ul>
-               </li>
-            </ul>
-         </div>
+					<ul>
+						<li>🌎 <a href="https://www.psykrop.com/" target="_blank"> psykrop.com</a><span> - Website</span></li>
+						<li>🌎 <a href="https://psykrop-api.herokuapp.com/" target="_blank"> psykrop API</a><span> - Dev Documentation</span></li>
+					</ul>
+				</ul>
+			</div>
 
+			<!-- project item -->
+			<div class="repo-container">
+				<img
+					src="https://s3.amazonaws.com/ronerlihstudio.com/Images/Screen+Shot+2018-09-29+at+17.05.55.jpg"
+					alt="AWS cross-company privilages dashboard"
+				/>
+				<ul>
+					<div class="title">
+						<strong>psyKrop</strong>
+					</div>
+					<blockquote>
+						<div><em>psyKrop™ a camera and editing app that guides you to frame in real-time, </em></div>
+						<div><em>to achieve compositionally balanced and aesthetically pleasing photos.</em></div>
+					</blockquote>
+					<ul>
+						<li>🌎 <a href="https://www.psykrop.com/" target="_blank"> psykrop.com</a><span> - Website</span></li>
+						<li>🌎 <a href="https://psykrop-api.herokuapp.com/" target="_blank"> psykrop API</a><span> - Dev Documentation</span></li>
+					</ul>
+				</ul>
+			</div>
+
+			<!-- project item -->
+			<section class="repo-container">
+				<img src="https://s3-us-west-2.amazonaws.com/ronerlih.com/resources/GoogleMirror/gooogleMirror_05.jpg" alt="googlemirror.net" />
+				<ul>
+					<div class="title">
+						<strong>GoogleMirror.net </strong>
+						<time datetime="2012-01-01">(2012)</time>
+					</div>
+					<blockquote>
+                  <div><em>Searchs for a similar image from Google using your webcam!</em></div>
+					</blockquote>
+                  <ul>
+						<li>🌎 <a href="http://googlemirror.net/" target="_blank"> googlemirror.net</a><span> - live</span></li>
+						<li>🌎 <a href="https://ronerlihstudio.com/googleMirror.html" target="_blank"> more</a><span> - About, photos, and video</span></li>
+						<li>
+							<a class="github-link" href="https://github.com/ronerlih/googlemirror.net" style="vertical-align: middle">
+								<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="-3 0 28 28">
+									<path
+										class="gradient"
+										data-hover="false"
+										d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+									></path>
+									<defs>
+										<linearGradient id="gradient-layer" x1="0" x2="0" y1="62" y2="0" gradientUnits="userSpaceOnUse">
+											<stop offset="30%" stop-color="#e1a728"></stop>
+											<stop offset="80%" stop-color="#e1a728"></stop>
+											<stop offset="100%" stop-color="#24bed2"></stop>
+										</linearGradient>
+									</defs>
+									<path
+										class="gradient-initial"
+										data-hover="false"
+										d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+										fill="black"
+									></path>
+								</svg>
+								github
+							</a>
+						</li>
+					</ul>
+				</ul>
+			</section>
+
+			<!-- project item -->
+			<div class="repo-container">
+				<img src="https://ronerlihstudio.com/Images/dev-now.jpg" alt="googlemirror.net" />
+				<ul>
+					<div class="title">
+						<strong>DevNow projects</strong>
+					</div>
+               <blockquote>
+                  <div><em>Catalouge of work - A wide range of product and services under developingNow</em></div>
+                  <div><em>(Lead and architecture)</em></div>
+               </blockquote>
+					<ul>
+						<li>🌎 <a href="https://www.developing.co/" target="_blank">https://www.developing.co/</a><span> - catalog</span></li>
+					</ul>
+				</ul>
+			</div>
+
+			<!-- project item -->
+			<div class="repo-container">
+				<img src="https://ronerlihstudio.com/Images/aws-buckets.jpg" alt="AWS cross-company privilages dashboard" />
+				<ul>
+					<div class="title">
+						<strong>AWS cross-company privileges dashboard</strong>
+					</div>
+               <blockquote>
+                  <div><em>Drop Box like service to manage privillages for S3 buckets and AWS apps.</em></div>
+               </blockquote>
+					<ul>
+						<li>
+							<a class="github-link" href="https://github.com/ronerlih/dropBucket-AWS" style="vertical-align: middle">
+								<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="-3 0 28 28">
+									<path
+										class="gradient"
+										data-hover="false"
+										d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+									></path>
+									<defs>
+										<linearGradient id="gradient-layer" x1="0" x2="0" y1="62" y2="0" gradientUnits="userSpaceOnUse">
+											<stop offset="30%" stop-color="#e1a728"></stop>
+											<stop offset="80%" stop-color="#e1a728"></stop>
+											<stop offset="100%" stop-color="#24bed2"></stop>
+										</linearGradient>
+									</defs>
+									<path
+										class="gradient-initial"
+										data-hover="false"
+										d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+										fill="black"
+									></path>
+								</svg>
+								github
+							</a>
+						</li>
+					</ul>
+				</ul>
+			</div>
+			<!-- project item -->
+			<div class="repo-container">
+				<img src="https://ronerlihstudio.com/Images/Vera-Technology-Hero.jpg" alt="AWS cross-company privilages dashboard" />
+				<ul>
+					<div class="title">
+						<strong>Vera</strong>
+					</div>
+               <blockquote>
+                  <div><em>Content assement tool, analyze content in real time, </em></div>
+                  <div><em>for rating based on brand equity, audience, location and timing.</em></div>
+               </blockquote>
+
+					<ul>
+						<li>🌎 <a href="http://wethem.us/blkbox/work" target="_blank"> BlkBox</a><span> - Catalogue</span></li>
+					</ul>
+				</ul>
+			</div>
+
+			<!-- project item -->
+			<div class="repo-container">
+				<img src="https://ronerlihstudio.com/Images/static1.squarespace.jpg" alt="AWS cross-company privilages dashboard" />
+				<ul>
+					<div class="title">
+						<strong>Millenial Finder</strong>
+					</div>
+               <blockquote>
+                  <div><em>local demographic segmentation tool,</em></div>
+                  <div><em>Uncover key insights for target demographic throughout the country.</em></div>
+               </blockquote>
+
+					<ul>
+						<li>🌎 <a href="http://wethem.us/blkbox/work" target="_blank"> BlkBox</a><span> - Catalogue</span></li>
+					</ul>
+				</ul>
+			</div>
+
+			<!-- project item -->
+			<div class="repo-container">
+				<img
+					src="https://s3.amazonaws.com/ronerlihstudio.com/Images/Screen+Shot+2018-09-29+at+16.29.53.png"
+					alt="AWS cross-company privilages dashboard"
+				/>
+				<ul>
+					<div class="title">
+						<strong>Quantum</strong>
+					</div>
+               <blockquote>
+                  <div><em>Automate a wide range of data aggrigators and services gathering live and past data</em></div>
+                  <div><em>across competitos, drivers, and different metrics, for future predictions.</em></div>
+               </blockquote>
+
+					<ul>
+						<li>🌎 <a href="http://wethem.us/blkbox/work" target="_blank"> BlkBox</a><span> - Catalogue</span></li>
+					</ul>
+				</ul>
+			</div>
 		</main>
 
-      <!-- svg defs -->
-     <svg>
-      <defs>
-         <linearGradient id="gradient-layer-initial" x1="0" x2="0" y1="62" y2="0" gradientUnits="userSpaceOnUse">
-            <stop offset="30%" stop-color="#000" stop-opacity="0"></stop>
-            <stop offset="80%" stop-color="#000" stop-opacity="0"></stop>
-            <stop offset="100%" stop-color="#000" stop-opacity="0"></stop>
-         </linearGradient>
-      </defs>
-     </svg>
+		<!-- svg defs -->
+		<svg>
+			<defs>
+				<linearGradient id="gradient-layer-initial" x1="0" x2="0" y1="62" y2="0" gradientUnits="userSpaceOnUse">
+					<stop offset="30%" stop-color="#000" stop-opacity="0"></stop>
+					<stop offset="80%" stop-color="#000" stop-opacity="0"></stop>
+					<stop offset="100%" stop-color="#000" stop-opacity="0"></stop>
+				</linearGradient>
+			</defs>
+		</svg>
 
 		<script>
+			const mainEl = document.querySelector("main");
+			mainEl.onmouseover = tieMouseOverEvent;
+			mainEl.onmouseout = tieMouseOutEvent;
 
-         const mainEl = document.querySelector("main");
-         mainEl.onmouseover = tieMouseOverEvent;
-         mainEl.onmouseout = tieMouseOutEvent;
+			function tieMouseOverEvent(e) {
+				if (e.target.matches(".github-link, .github-link *")) e.target.querySelector(".gradient-initial").style.opacity = 0;
 
-         function tieMouseOverEvent (e) {
-            if (e.target.matches(".github-link, .github-link *"))
-               e.target.querySelector(".gradient-initial").style.opacity = 0
-         }
+				//cute
+				// if (e.target.closest(".repo-container"))
+				//    e.target.closest(".repo-container").querySelector("img").classList.add("bounce")
+			}
 
-         function tieMouseOutEvent (e) {
-            if (e.target.matches(".github-link, .github-link *"))
-               e.target.querySelector(".gradient-initial").style.opacity = 1
+			function tieMouseOutEvent(e) {
+				if (e.target.matches(".github-link, .github-link *")) e.target.querySelector(".gradient-initial").style.opacity = 1;
 
-      }
+				//cute
+				// if (e.target.matches(".repo-container"))
+				//    e.target.closest(".repo-container").querySelector("img").classList.remove("bounce")
+			}
 			function mouseOver(e) {
-            console.log(e)
-				
+				console.log(e);
 			}
 
 			function mouseOut(e) {
-            console.log(e)
-
+				console.log(e);
 			}
 		</script>
 	</body>
