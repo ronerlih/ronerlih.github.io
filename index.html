@@ -4,182 +4,121 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
-		<style>
-			:root {
-				font-size: 20px;
-				line-height: 1.5;
-				font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-					"Segoe UI Symbol";
-				-webkit-text-size-adjust: 100%;
-				color: #24292e;
-			}
-			* {
-				box-sizing: border-box;
-			}
-			main {
-				font-size: 1.2rem;
-				line-height: 1.5;
-				padding: 16px;
-			}
-			svg {
-				vertical-align: middle;
-			}
-			li > * {
-				vertical-align: top;
-			}
-			ul {
-				margin-top: 0px;
-			}
-			ul ul li {
-				list-style-type:disc;
-				list-style-type:disc;
-			}
-			ul a {
-				padding-left: 4px;
-			}
-         ul * {
-            vertical-align: text-bottom;
+		<title>ronerlih.github.io</title>
 
-         }
-         time {
-            position: relative;
-            top:-4px;
-         }
-			ul ul {
-				margin: 5px 0px 0px -20px;
-			}
-			.repo-container {
-				margin: 0px;
-				min-height: 180px;
-			}
-			.repo-container > ul {
-				display: inline-block;
-			}
-			.gradient {
-				pointer-events: all;
-				fill: url("#gradient-layer-initial");
-			}
-
-			img {
-				width: 200px;
-				border: 2px solid black;
-				vertical-align: top;
-				margin: 8px -10px 0px 0px;
-			}
-			.github-link {
-				cursor: pointer;
-				left: -5px;
-				top: -2px;
-				position: relative;
-			}
-
-			.gradient {
-				fill: url("#gradient-layer");
-			}
-			.gradient-initial {
-				transition: 0.4s;
-			}
-			.gradient ~ defs stop:first-child {
-				stop-color: #e1a728;
-			}
-
-			.gradient ~ defs stop:nth-child(2) {
-				stop-color: #e1a728;
-			}
-
-			.gradient ~ defs stop:last-child {
-				stop-color: #24bed2;
-			}
-			/* .gradient[data-hover=false] ~ defs stop:first-child {
-				stop-color: #240f3c;
-			}
-
-			.gradient[data-hover=false] ~ defs stop:nth-child(2) {
-				stop-color: #3f2f0c;
-			}
-
-			.gradient[data-hover=false] ~ defs stop:last-child {
-				stop-color: #1c2021;
-			} */
-			/* .gradient ~ defs stop:first-child {
-				stop-color: #099b68;
-			}
-
-			.gradient ~ defs stop:nth-child(2) {
-				stop-color: #6f28e1;
-			}
-
-			.gradient ~ defs stop:last-child {
-				stop-color: #ac333b;
-			} */
-
-			time {
-				font-size: 0.7rem;
-				vertical-align: middle;
-			}
-			h1 {
-				padding-bottom: 0.3em;
-				margin-top: 0px;
-				margin-bottom: 0px;
-				font-size: 2rem;
-				border-bottom: 1px solid #eaecef;
-				font-weight: 600;
-				line-height: 1.25;
-			}
-			.bounce {
-				position: relative;
-				animation: bounce 0.7s infinite ease-in-out;
-			}
-			.title {
-				position: relative;
-				/* left: -15px; */
-			}
-			blockquote {
-				/* border-radius: 5px; */
-				background: #f6f6f6;
-				margin: 5px 0px 0px 0px;
-				padding: 10px 14px;
-            border-left: 4px solid rgb(153, 153, 153);
-            /* box-shadow: 0px 0px 10px 0px inset rgb(199, 199, 199); */
-            font-size: 1rem;
-			}
-			@keyframes bounce {
-				0% {
-					bottom: 5px;
-				}
-				25%,
-				75% {
-					bottom: 15px;
-				}
-				50% {
-					bottom: 20px;
-				}
-				100% {
-					bottom: 0;
-				}
-			}
-			@media screen and (max-width: 768px) {
-				img {
-					width: 100%;
-				}
-				.repo-container > ul {
-					display: block;
-					padding: 0px;
-					margin-top: 20px;
-				}
-			}
-		</style>
+		<!-- local css -->
+		<link rel="stylesheet" href="assets/css/style.css" />
 	</head>
 	<body>
 		<main>
+			<!-- title -->
 			<h1>ronerlih.github.io</h1>
 			<h2>
-				<font style="font-size: 2rem; margin-bottom: -42px">
-					<!-- 🦄 -->
-				</font>
+				<span style="font-size: 2rem; margin-bottom: -42px"><!-- 🦄 --></span>
 				Projects, Gists, Works, and Dreams
 			</h2>
+         
+			<!-- project item -->
+			<div class="repo-container">
+				<img
+					src="https://ronerlihstudio.com/InVisiBle/Images/lowRes_spaceInvader.gif"
+					alt="emojiMandala.net"
+				/>
+				<ul>
+					<div class="title">
+						<strong>inVisible</strong>
+						<time datetime="2017-01-01">(2016)</time>
+					</div>
+					<blockquote>
+						<div><em>An AR scavenger hunt at the children׳s museum.</em></div>
+					</blockquote>
+					<ul>
+						<li>🌎 <a href="https://onlinemuseum.youngatartmuseum" target="_blank"> onlinemuseum.youngatartmuseum</a><span> - Website</span></li>
+						<li>🌎 <a href="https://youngatartmuseum" target="_blank"> Young At Art Museum Florida</a><span> </span></li>
+					</ul>
+				</ul>
+			</div>
+         
+			<!-- project item -->
+			<div class="repo-container">
+				<img
+					src="https://s3.amazonaws.com/ronerlihstudio.com/images/emojiMandala-light.jpg"
+					alt="emojiMandala.net"
+				/>
+				<ul>
+					<div class="title">
+						<strong>emojiMandala.net</strong>
+						<time datetime="2017-01-01">(2017)</time>
+					</div>
+					<blockquote>
+						<div><em>Emoji meditation.</em></div>
+					</blockquote>
+					<ul>
+						<li>🌎 <a href="http://emojimandala.net/" target="_blank"> http://emojimandala.net/</a><span> - Website</span></li>
+					</ul>
+				</ul>
+			</div>
+
+         <!-- project item -->
+         <div class="repo-container">
+            <img
+               src="https://ronerlihstudio.com/images/mona.jpg"
+               alt="Painting value estimator"
+            />
+            <ul>
+               <div class="title">
+                  <strong>Painting value estimator</strong>
+						<time datetime="2019-01-01">(2019)</time>
+               </div>
+               <blockquote>
+                  <div><em>A machine learning model that estimated painting value at auction.</em></div>
+               </blockquote>
+               <ul>
+						<li>💭 <a href="mailto:ronerlih@gmail.com" target="_blank"> Please contact to collaborate</a><span></span></li>
+               </ul>
+            </ul>
+         </div>
+
+			<!-- project item -->
+			<div class="repo-container">
+				<img
+					src="https://ronerlihstudio.com/images/royals.jpg"
+					alt="J finder"
+				/>
+				<ul>
+					<div class="title">
+						<strong>jFinder.com</strong>
+						<time datetime="2018-01-01">(2018)</time>
+					</div>
+					<blockquote>
+						<div><em>Use machine-learning to find out how Jewish you look!</em></div>
+						<div><em>(Exploring biases in machine learning)</em></div>
+					</blockquote>
+					<ul>
+						<li>🌎 <a href="https://jfinder.com/" target="_blank"> jfinder.com</a><span> - WebApp & info</span></li>
+					</ul>
+				</ul>
+			</div>
+
+         <!-- project item -->
+			<div class="repo-container">
+				<img
+					src="https://ronerlihstudio.com/Images/whitespacefinder-lightt.jpg"
+					alt="market finder"
+				/>
+				<ul>
+					<div class="market finder">
+						<strong>Market Finder</strong>
+					</div>
+					<blockquote>
+						<div><em>Find vauable market spaces using quaterly reports aggrigation,</em></div>
+						<div><em>Compared with google and twitter trends.</em></div>
+					</blockquote>
+					<ul>
+						<li>🌱 <a href="#" > </a><span> - Passed away</span></li>
+					</ul>
+				</ul>
+			</div>
 
 			<!-- project item -->
 			<div class="repo-container">
@@ -196,8 +135,18 @@
 					</blockquote>
 
 					<ul>
-						<li>🌎 <a href="https://www.psykrop.com/" target="_blank"> psykrop.com</a><span> - Website</span></li>
-						<li>🌎 <a href="https://psykrop-api.herokuapp.com/" target="_blank"> psykrop API</a><span> - Dev Documentation</span></li>
+						<li>
+							<del style="text-decoration-thickness: 4px; color: rgb(225, 0, 255)">
+								<span style="line-height: 22px">
+									<span style="font-size: 1px"> &nbsp;&nbsp;&nbsp; </span>
+									&nbsp;🌎&nbsp;
+									<span style="font-size: 1px"> &nbsp;&nbsp; </span>
+								</span>
+							</del>
+							<a href="#">Protected IP</a><span> </span>
+						</li>
+						<li> 💭 <a href="mailto:ronerlih@gmail.com" target="_blank"> Please contact to contribute</a><span> - Website</span></li>
+
 					</ul>
 				</ul>
 			</div>
@@ -215,6 +164,7 @@
 					<blockquote>
 						<div><em>psyKrop™ a camera and editing app that guides you to frame in real-time, </em></div>
 						<div><em>to achieve compositionally balanced and aesthetically pleasing photos.</em></div>
+						<div><em>Lead architectand Backend.</em></div>
 					</blockquote>
 					<ul>
 						<li>🌎 <a href="https://www.psykrop.com/" target="_blank"> psykrop.com</a><span> - Website</span></li>
@@ -232,9 +182,9 @@
 						<time datetime="2012-01-01">(2012)</time>
 					</div>
 					<blockquote>
-                  <div><em>Searchs for a similar image from Google using your webcam!</em></div>
+						<div><em>Searchs for a similar image from Google using your webcam!</em></div>
 					</blockquote>
-                  <ul>
+					<ul>
 						<li>🌎 <a href="http://googlemirror.net/" target="_blank"> googlemirror.net</a><span> - live</span></li>
 						<li>🌎 <a href="https://ronerlihstudio.com/googleMirror.html" target="_blank"> more</a><span> - About, photos, and video</span></li>
 						<li>
@@ -273,10 +223,10 @@
 					<div class="title">
 						<strong>DevNow projects</strong>
 					</div>
-               <blockquote>
-                  <div><em>Catalouge of work - A wide range of product and services under developingNow</em></div>
-                  <div><em>(Lead and architecture)</em></div>
-               </blockquote>
+					<blockquote>
+						<div><em>Catalouge of work - A wide range of product and services under developingNow</em></div>
+						<div><em>(Lead and architecture)</em></div>
+					</blockquote>
 					<ul>
 						<li>🌎 <a href="https://www.developing.co/" target="_blank">https://www.developing.co/</a><span> - catalog</span></li>
 					</ul>
@@ -290,9 +240,9 @@
 					<div class="title">
 						<strong>AWS cross-company privileges dashboard</strong>
 					</div>
-               <blockquote>
-                  <div><em>Drop Box like service to manage privillages for S3 buckets and AWS apps.</em></div>
-               </blockquote>
+					<blockquote>
+						<div><em>Drop Box like service to manage privillages for S3 buckets and AWS apps.</em></div>
+					</blockquote>
 					<ul>
 						<li>
 							<a class="github-link" href="https://github.com/ronerlih/dropBucket-AWS" style="vertical-align: middle">
@@ -329,10 +279,10 @@
 					<div class="title">
 						<strong>Vera</strong>
 					</div>
-               <blockquote>
-                  <div><em>Content assement tool, analyze content in real time, </em></div>
-                  <div><em>for rating based on brand equity, audience, location and timing.</em></div>
-               </blockquote>
+					<blockquote>
+						<div><em>Content assement tool, analyze content in real time, </em></div>
+						<div><em>for rating based on brand equity, audience, location and timing.</em></div>
+					</blockquote>
 
 					<ul>
 						<li>🌎 <a href="http://wethem.us/blkbox/work" target="_blank"> BlkBox</a><span> - Catalogue</span></li>
@@ -347,10 +297,10 @@
 					<div class="title">
 						<strong>Millenial Finder</strong>
 					</div>
-               <blockquote>
-                  <div><em>local demographic segmentation tool,</em></div>
-                  <div><em>Uncover key insights for target demographic throughout the country.</em></div>
-               </blockquote>
+					<blockquote>
+						<div><em>local demographic segmentation tool,</em></div>
+						<div><em>Uncover key insights for target demographic throughout the country.</em></div>
+					</blockquote>
 
 					<ul>
 						<li>🌎 <a href="http://wethem.us/blkbox/work" target="_blank"> BlkBox</a><span> - Catalogue</span></li>
@@ -368,10 +318,10 @@
 					<div class="title">
 						<strong>Quantum</strong>
 					</div>
-               <blockquote>
-                  <div><em>Automate a wide range of data aggrigators and services gathering live and past data</em></div>
-                  <div><em>across competitos, drivers, and different metrics, for future predictions.</em></div>
-               </blockquote>
+					<blockquote>
+						<div><em>Automate a wide range of data aggrigators and services gathering live and past data</em></div>
+						<div><em>across competitos, drivers, and different metrics, for future predictions.</em></div>
+					</blockquote>
 
 					<ul>
 						<li>🌎 <a href="http://wethem.us/blkbox/work" target="_blank"> BlkBox</a><span> - Catalogue</span></li>
