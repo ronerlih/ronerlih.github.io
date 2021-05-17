@@ -10,6 +10,7 @@
    --border-gray: rgb(153, 153, 153);
    --border-dark-gray: rgb(73, 73, 73);
    --card-gray: #f6f6f6;
+   scroll-behavior: smooth;
 }
 * {
    box-sizing: border-box;
