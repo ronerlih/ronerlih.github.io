@@ -15,6 +15,9 @@
 * {
    box-sizing: border-box;
 }
+body {
+
+}
 h1, h2,h3,h4, h5, h6 {
                /* font-family: "Roboto", sans-serif; */
 }
@@ -27,7 +30,6 @@ h3 {
 main {
    font-size: 1.2rem;
    line-height: 1.5;
-   padding: 16px;
 }
 svg {
    vertical-align: middle;
