@@ -8,6 +8,7 @@
    -webkit-text-size-adjust: 100%;
    color: #24292e;
    --border-gray: rgb(153, 153, 153);
+   --border-dark-gray: rgb(73, 73, 73);
    --card-gray: #f6f6f6;
 }
 * {
@@ -15,6 +16,12 @@
 }
 h1, h2,h3,h4, h5, h6 {
                /* font-family: "Roboto", sans-serif; */
+}
+h3 {
+   padding: 0px 28px 8px 8px;
+   border-top: 4px solid var( --border-dark-gray);
+   /* border-left: 4px solid var( --border-dark-gray); */
+   display: inline-block;
 }
 main {
    font-size: 1.2rem;
@@ -135,6 +142,9 @@ h1 {
    font-weight: 600;
    line-height: 1.25;
 }
+#TOC {
+   font-size: 14px;
+}
 .bounce {
    position: relative;
    animation: bounce 0.7s infinite ease-in-out;
@@ -149,7 +159,8 @@ blockquote {
    margin: 5px 0px 0px 0px;
    padding: 10px 14px;
    border-left: 5px solid var(--border-gray);
-   border-left: 5px solid rgb(73, 73, 73);
+   border-left: 5px solid var(--border-dark-gray);
+   /* border-left: 5px solid rgb(73, 73, 73); */
    /* box-shadow: 0px 0px 10px 0px inset rgb(199, 199, 199); */
    font-size: 1rem;
 }
