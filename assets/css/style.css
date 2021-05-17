@@ -43,6 +43,7 @@ ul ul li {
 }
 ul a {
    padding-left: 4px;
+   word-break: break-all;
 }
 ul * {
    vertical-align: text-bottom;
@@ -185,7 +186,7 @@ blockquote {
    }
 }
 @media screen and (max-width: 768px) {
-   h1 {
+   /* h1 {
       font-size: 35px;
    }
    h2 {
@@ -195,7 +196,7 @@ blockquote {
       font-size: 22px;
    }
    
-   
+    */
    img {
       width: 100%;
    }
