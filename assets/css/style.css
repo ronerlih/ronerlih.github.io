@@ -149,6 +149,12 @@ h1 {
 #TOC {
    font-size: 0.7rem;
 }
+#TOC ul{
+   padding-left:1rem;
+}
+#TOC ul li {
+   text-indent: -8px;
+}
 .bounce {
    position: relative;
    animation: bounce 0.7s infinite ease-in-out;
