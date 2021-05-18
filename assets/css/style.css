@@ -28,6 +28,7 @@ h3 {
    border-top: 4px solid var( --border-dark-gray);
    /* border-left: 4px solid var( --border-dark-gray); */
    display: inline-block;
+
 }
 main {
    font-size: 1.2rem;
@@ -68,7 +69,6 @@ time {
    align-items: flex-start;
    margin: 0px 0px 20px;
    flex-wrap: wrap;
-   scroll-snap-align: start;
 }
 .repo-container * {
    transition: all 0.2s;
@@ -225,13 +225,21 @@ h1 {
    width:35px;
    margin:10px 8px 0px 0px;
 }
+
+
 @media screen and (max-width: 768px) {
    html {
-      scroll-snap-type: y mandatory;
       scroll-snap-align: start;
+      scroll-snap-type: y mandatory;
+
    }
+   
    .detail-container {
       padding: 0px!important;
+
+   }
+   .section-title {
+      scroll-snap-align: start;
    }
    .repo-container .img-container{
       order: 0;
@@ -258,6 +266,8 @@ h1 {
    .repo-container {
       margin:10px 0px 30px 0px;
       padding-top: 7px;
+      scroll-snap-align: start;
+
    }
    /* hover */
    .img-container{
