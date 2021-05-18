@@ -23,6 +23,7 @@ h1, h2,h3,h4, h5, h6 {
 }
 h3 {
    padding: 0px 28px 8px 8px;
+   margin: 10px 0px 0px;
    border-top: 4px solid var( --border-dark-gray);
    /* border-left: 4px solid var( --border-dark-gray); */
    display: inline-block;
@@ -60,11 +61,44 @@ ul ul {
    font-size: 1rem;
 }
 .repo-container {
-   margin: 0px;
-   min-height: 180px;
+   display: flex;
+   align-items: flex-start;
+   margin: 0px 0px 20px;
+   flex-wrap: wrap;
+}
+.repo-container .img-container {
+   flex: 0 1 100px;
+   height: 100%;
+   order: 1;
+}
+.repo-container .detail-container {
+   /* 25px -> border + body margin */
+   flex: 1 0 calc(100% - 100px);
+   flex-wrap: wrap;
+   margin:0px 0px;
+   padding: 0px 20px;
+   display: flex;
+   order: 1;
+}
+blockquote {
+   margin: 0px 10px 0px 0px;
+   background: var(--card-gray);
+     padding: 5px 10px;
+     border-left: 5px solid var(--border-gray);
+     border-left: 5px solid var(--border-dark-gray);
+     /* border-left: 5px solid rgb(73, 73, 73); */
+     /* box-shadow: 0px 0px 10px 0px inset rgb(199, 199, 199); */
+     font-size: 1rem;
+     flex: 1 0 500px;
+}
+.margin-top-0 {
+   margin-top: 0px !important;
 }
 .repo-container > ul {
    display: inline-block;
+   margin:0px;
+   order:1;
+   padding: 0px 30px;
 }
 .gradient {
    pointer-events: all;
@@ -72,7 +106,7 @@ ul ul {
 }
 
 img {
-   width: 200px;
+   width: 100%;
    /* border-top: 10px solid  rgb(153, 153, 153);
    border-left: 10px solid  rgb(34, 34, 34);
    border-right: 10px solid  rgb(194, 194, 194);
@@ -81,10 +115,10 @@ img {
    /* padding:2px;  */
    /* background-color: #000000;  */
    /* border-left: 5px solid var(--border-gray); */
-   border: 3px solid black;
+   /* border: 3px solid black;
    vertical-align: top;
    margin: 10px -10px 0px 0px;
-   /* margin: 43px -10px 0px 0px; */
+   margin: 43px -10px 0px 0px; */
 }
 .github-link {
    cursor: pointer;
@@ -160,20 +194,11 @@ h1 {
    animation: bounce 0.7s infinite ease-in-out;
 }
 .title {
-   position: relative;
+   flex: 1 0 100%;
    /* left: -15px; */
+   order: 1;
 }
-blockquote {
-   /* border-radius: 5px; */
-   background: var(--card-gray);
-   margin: 5px 0px 0px 0px;
-   padding: 10px 14px;
-   border-left: 5px solid var(--border-gray);
-   border-left: 5px solid var(--border-dark-gray);
-   /* border-left: 5px solid rgb(73, 73, 73); */
-   /* box-shadow: 0px 0px 10px 0px inset rgb(199, 199, 199); */
-   font-size: 1rem;
-}
+
 .npm {
    border: none;
    width:35px;
@@ -196,15 +221,33 @@ blockquote {
 }
 @media screen and (max-width: 768px) {
 
+   .repo-container .img-container{
+      order: 0;
+   }
+   .img-container {
+      flex: 1 1 100%!important;
+   }
+   blockquote{
+      flex: 1 1 100%;
+   }
+
    blockquote, ul ul {
       font-size: 0.7rem;
    }
    img {
       width: 100%;
+      border: 1px solid black;
    }
    .repo-container > ul {
       display: block;
       padding: 0px;
-      margin-top: 20px;
+      margin-top: 10px;
+   }
+
+   .repo-container {
+      margin-top:40px;
+   }
+   .repo-container:first-of-type {
+      margin-top:0px;
    }
 }
