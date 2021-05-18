@@ -139,10 +139,10 @@ img {
    /* padding:2px;  */
    /* background-color: #000000;  */
    /* border-left: 5px solid var(--border-gray); */
-   /* border: 3px solid black;
-   vertical-align: top;
+   border: 2px solid black;
+   /* vertical-align: top;
    margin: 10px -10px 0px 0px;
-   margin: 43px -10px 0px 0px; */
+   margin: 43px -10px 0px 0px; */ */
 }
 .github-link {
    cursor: pointer;
