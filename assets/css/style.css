@@ -15,7 +15,8 @@
 * {
    box-sizing: border-box;
 }
-body {
+html {
+   scroll-behavior: smooth;
 
 }
 h1, h2,h3,h4, h5, h6 {
@@ -31,7 +32,7 @@ h3 {
 main {
    font-size: 1.2rem;
    line-height: 1.5;
-}
+  }
 svg {
    vertical-align: middle;
 }
@@ -41,9 +42,9 @@ li > * {
 ul {
    margin-top: 0px;
 }
-ul ul li {
+/* ul ul li {
    list-style-type:disc;
-}
+} */
 ul a {
    padding-left: 4px;
    word-break: break-all;
@@ -67,11 +68,21 @@ time {
    align-items: flex-start;
    margin: 0px 0px 20px;
    flex-wrap: wrap;
+   scroll-snap-align: start;
 }
+.repo-container * {
+   transition: all 0.2s;
+
+}
+
 .repo-container .img-container {
    flex: 0 1 100px;
    height: 100%;
    order: 1;
+}
+.img-container:hover{
+   flex: 0 1 150px;
+
 }
 .repo-container .detail-container {
    /* 25px -> border + body margin */
@@ -81,6 +92,7 @@ time {
    padding: 0px 20px;
    display: flex;
    order: 1;
+   align-items: flex-start;
 }
 blockquote {
    margin: 0px 10px 0px 0px;
@@ -92,17 +104,26 @@ blockquote {
      /* box-shadow: 0px 0px 10px 0px inset rgb(199, 199, 199); */
      font-size: 1rem;
      flex: 0 0 60%;
-     min-width: 500px;
+     min-width: 600px;
+}
+
+.img-container:hover ~ .detail-container{
+   flex: 1 0 calc(100% - 150px);
+
+}
+.img-container:hover ~ .detail-container > blockquote{
+   flex: 0 0 calc(60% - 20px);
+
 }
 .margin-top-0 {
    margin-top: 0px !important;
 }
-.repo-container > ul {
+/* .repo-container > ul {
    display: inline-block;
    margin:0px;
    order:1;
    padding: 0px 30px;
-}
+} */
 .gradient {
    pointer-events: all;
    fill: url("#gradient-layer-initial");
@@ -192,10 +213,7 @@ h1 {
 #TOC ul li {
    text-indent: -8px;
 }
-.bounce {
-   position: relative;
-   animation: bounce 0.7s infinite ease-in-out;
-}
+
 .title {
    flex: 1 0 100%;
    /* left: -15px; */
@@ -207,22 +225,11 @@ h1 {
    width:35px;
    margin:10px 8px 0px 0px;
 }
-@keyframes bounce {
-   0% {
-      bottom: 5px;
-   }
-   25%,
-   75% {
-      bottom: 15px;
-   }
-   50% {
-      bottom: 20px;
-   }
-   100% {
-      bottom: 0;
-   }
-}
 @media screen and (max-width: 768px) {
+   html {
+      scroll-snap-type: y mandatory;
+      scroll-snap-align: start;
+   }
    .detail-container {
       padding: 0px!important;
    }
@@ -234,6 +241,7 @@ h1 {
    }
    blockquote{
       flex: 1 1 100%;
+      min-width: initial;
    }
 
    blockquote, .repo-container ul {
@@ -248,7 +256,19 @@ h1 {
    }
 
    .repo-container {
-      margin-top:40px;
+      margin:10px 0px 30px 0px;
+      padding-top: 7px;
+   }
+   /* hover */
+   .img-container{
+      flex: 0 1 100px;
+   }
+   .img-container:hover ~ .detail-container{
+      flex: 1 0 calc(100% - 100px);
+   
+   }
+   .img-container:hover ~ .detail-container > blockquote{
+      flex: 1 1 100%;
    }
 
 }
