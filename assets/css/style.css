@@ -61,7 +61,7 @@ time {
 .repo-container ul  {
    margin: 0px 30px 0px;
    padding: 5px 0px;
-   font-size: 1rem;
+   font-size: 1.2rem;
    flex: 1 1 calc(40% - 70px);
 }
 .repo-container {
@@ -102,7 +102,7 @@ blockquote {
      border-left: 5px solid var(--border-dark-gray);
      /* border-left: 5px solid rgb(73, 73, 73); */
      /* box-shadow: 0px 0px 10px 0px inset rgb(199, 199, 199); */
-     font-size: 1rem;
+     font-size: 1.2rem;
      flex: 0 0 60%;
      min-width: 600px;
 }
@@ -205,7 +205,7 @@ h1 {
    line-height: 1.25;
 }
 #TOC {
-   font-size: 0.7rem;
+   font-size: 1rem;
 }
 #TOC ul{
    padding-left:1rem;
