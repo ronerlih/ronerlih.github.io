@@ -61,7 +61,7 @@ time {
 .repo-container ul  {
    margin: 0px 30px 0px;
    padding: 5px 0px;
-   font-size: 1.2rem;
+   font-size: 1rem;
    flex: 1 1 calc(40% - 70px);
 }
 .repo-container {
