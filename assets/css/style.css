@@ -19,8 +19,14 @@ html {
    scroll-behavior: smooth;
 
 }
+body{
+   position: relative;
+}
 h1, h2,h3,h4, h5, h6 {
                /* font-family: "Roboto", sans-serif; */
+}
+h2 div {
+   font-size: 1.4rem;;   
 }
 h3 {
    padding: 0px 28px 8px 8px;
@@ -117,7 +123,54 @@ blockquote {
 }
 .margin-top-0 {
    margin-top: 0px !important;
+} 
+.margin-bottom-2 {
+   margin-bottom: 20px !important;
 }
+.margin-sides-1 {
+   margin-left: 10px !important;
+   margin-right: 10px !important;
+}
+.display-inline {
+   display: inline-block;
+}
+.social * {
+   font-size: 12px;
+   text-decoration: none!important;
+}
+.social span {
+   vertical-align: bottom;
+}
+.up {
+   position:fixed;
+   right: 10px;
+   bottom: -5px;
+   display: inline-block;
+   font-size: 3rem;
+   text-decoration: none;
+   vertical-align: middle;
+   opacity: 0.6;
+}
+
+.popup-animation {
+   animation: bounce .8s;
+}
+kbd {
+   background-color: #eee;
+   border-radius: 3px;
+   border: 1px solid #b4b4b4;
+   box-shadow: 0 1px 1px rgba(0, 0, 0, .2), 0 2px 0 0 rgba(255, 255, 255, .7) inset;
+   color: #333;
+   display: inline-block;
+   position: relative;
+   top:-2px;
+   margin: 0px 3px;
+   font-size: .85em;
+   font-weight: 700;
+   line-height: 1;
+   padding: 2px 4px;
+   white-space: nowrap;
+   }
 /* .repo-container > ul {
    display: inline-block;
    margin:0px;
@@ -204,6 +257,7 @@ h1 {
    font-weight: 600;
    line-height: 1.25;
 }
+
 #TOC {
    font-size: 1rem;
 }
@@ -225,8 +279,19 @@ h1 {
    width:35px;
    margin:10px 8px 0px 0px;
 }
-
-
+@-webkit-keyframes bounce {
+   0% {
+       -webkit-transform: translate3d(0, 0, 0);
+       transform: translate3d(0, 0, 0);
+   }
+   40% {
+       -webkit-transform: translate3d(0, 100px, 0);
+       transform: translate3d(0, -100px, 0);
+   }
+   100% {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+  }  }
 @media screen and (max-width: 768px) {
    html {
       scroll-snap-align: start;
@@ -280,5 +345,7 @@ h1 {
    .img-container:hover ~ .detail-container > blockquote{
       flex: 1 1 100%;
    }
+.up {
+font-size: 2rem;
 
 }
