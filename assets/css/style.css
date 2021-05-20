@@ -177,10 +177,7 @@ kbd {
    order:1;
    padding: 0px 30px;
 } */
-.gradient {
-   pointer-events: all;
-   fill: url("#gradient-layer-initial");
-}
+
 
 img {
    width: 100%;
@@ -203,8 +200,32 @@ img {
    top: -2px;
    position: relative;
 }
+/* .gradient {
+   pointer-events: all;
+   fill: url("#gradient-layer-initial");
+} */
 
+/* social svg */
+.social a:hover .gradient-initial {
+   opacity: 0;
+}
+.gradient-initial {
+   transition: 0.4s;
+}
+.gradient ~ defs stop:first-child {
+   stop-color: #e1a728;
+}
+
+.gradient ~ defs stop:nth-child(2) {
+   stop-color: #e1a728;
+}
+
+.gradient ~ defs stop:last-child {
+   stop-color: #24bed2;
+}
+/* github svg */
 .gradient {
+   pointer-events: all;
    fill: url("#gradient-layer");
 }
 .gradient-initial {
