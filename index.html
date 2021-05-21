@@ -1524,13 +1524,9 @@
 		<script>
 			const mainEl = document.querySelector("main");
 			const popUpEl = document.querySelector(".up");
-			let lastPopupTimestamp = -1500;
-			let popCount = 0;
-
-			mainEl.onmouseover = dropSvg;
-			mainEl.onmouseout = showSvg;
-			document.body.onscroll = popUp;
-
+			let lastPopupTimestamp = -1000;
+         let didntPopYet = true;
+         
 			function dropSvg(e) {
 				if (e.target.matches(".github-link, .github-link *, .social a * "))
 					e.target.closest("a").querySelector(".gradient-initial").style.opacity = 0;
@@ -1541,13 +1537,17 @@
 			}
 
 			function popUp(e) {
-				if (window.pageYOffset > 0 && lastPopupTimestamp + 2000 < e.timeStamp && popCount < 2) {
+				if (didntPopYet && window.pageYOffset > 0 && lastPopupTimestamp + 2000 < e.timeStamp) {
 					lastPopupTimestamp = e.timeStamp;
-					popCount++;
 					popUpEl.classList.add("popup-animation");
 					popUpEl.onanimationend = () => popUpEl.classList.remove("popup-animation");
 				}
 			}
+
+			mainEl.onmouseover = dropSvg;
+			mainEl.onmouseout = showSvg;
+			document.body.onscroll = popUp;
+
 		</script>
 
 		<!-- Google Tag Manager (noscript) -->
