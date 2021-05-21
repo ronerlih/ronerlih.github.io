@@ -206,7 +206,7 @@ img {
 } */
 
 /* social svg */
-.social a:hover .gradient-initial {
+.social:hover a:hover .gradient-initial {
    opacity: 0;
 }
 .gradient-initial {
