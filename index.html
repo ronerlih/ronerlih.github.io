@@ -1524,7 +1524,6 @@
 		<script>
 			const mainEl = document.querySelector("main");
 			const popUpEl = document.querySelector(".up");
-			let lastPopupTimestamp = -1000;
          let didntPopYet = true;
          
 			function dropSvg(e) {
@@ -1537,8 +1536,8 @@
 			}
 
 			function popUp(e) {
-				if (didntPopYet && window.pageYOffset > 0 && lastPopupTimestamp + 2000 < e.timeStamp) {
-					lastPopupTimestamp = e.timeStamp;
+				if (didntPopYet && window.pageYOffset > 0 &&  e.timeStamp > 600) {
+					didntPopYet = false;
 					popUpEl.classList.add("popup-animation");
 					popUpEl.onanimationend = () => popUpEl.classList.remove("popup-animation");
 				}
